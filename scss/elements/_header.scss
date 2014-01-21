@@ -1,0 +1,33 @@
+/*------------------------------------*\
+    _header.scss
+\*------------------------------------*/
+/**
+ *
+ * styling the header element
+ * =header......base header
+ *
+ */
+
+/**
+* =header
+*/
+header, .header {
+	background:none $white;
+	border-bottom:1px solid $grey;
+	/* mediaqueries */
+	@include media-query(desk) {
+		> .layout-centered {
+			padding:0;
+		}
+	}
+	@include media-query(lap) {
+		> .layout-centered {
+			padding:0 10px 0 10px;
+		}
+	}
+	@include media-query(palm) {
+		> .layout-centered {
+			padding:0 10px 0 10px;
+		}
+	}
+}

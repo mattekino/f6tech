@@ -1,0 +1,48 @@
+{
+  "name": "f6Tech_Template",
+  "version": "0.0.1",
+  "description": "f6Tech_Template",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattfullsix/template_inuit.git"
+  },
+  "keywords": [
+    "Grunt",
+    "Bower",
+    "Concat",
+    "Copy",
+    "Csslint",
+    "Jshint",
+    "Sass",
+    "Uglify",
+    "Watch",
+    "Html Validation",
+    "Jscs Checker"
+  ],
+  "author": "mattfullsix",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "a83eb58666e2a974f559e42b4c7a712f2f5b3eac",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-bower-verify": "~0.3.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-csslint": "~0.2.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-sass": "~0.5.1",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-html-validation": "~0.1.13",
+    "grunt-jscs-checker": "~0.3.2",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "time-grunt": "~0.2.8",
+    "jshint-stylish": "~0.1.5",
+    "grunt-newer": "~0.6.1",
+    "grunt-contrib-connect": "~0.6.0"
+  }
+}

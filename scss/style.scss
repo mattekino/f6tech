@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    style.scss
+\*------------------------------------*/
+/**
+ *
+ * sass --watch scss/style.scss:html/css/style.min.css --style compressed
+ *
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup
+ */
+@import "vars";
+@import "../bower_components/inuit.css/inuit";
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+//@import "ui/example";
+
+@import "objects/utils";
+@import "objects/fonts";
+@import "objects/table";
+@import "objects/links";
+@import "objects/lists";
+@import "objects/formobjects";
+@import "objects/headings";
+@import "objects/paragraphs";
+@import "objects/media";
+@import "objects/sprite";
+
+@import "elements/forms";
+@import "elements/header";
+@import "elements/footer";
+@import "elements/navigation";
+@import "elements/pagination";
+@import "elements/breadcrumbs";
+@import "elements/sitemap";
+@import "elements/sections";
+@import "elements/banner";
+@import "elements/blocks";
+@import "elements/brand";
+@import "elements/share";
+
+@import "page/layout";
+@import "page/ui";
+@import "page/ieadjust";

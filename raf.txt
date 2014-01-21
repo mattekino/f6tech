@@ -1,0 +1,12 @@
+- srcset ?
+https://github.com/sindresorhus/srcset/
+
+- Js : burger menu
+
+- init
+
+- test watch / livereload
+
+- ajouter un rep js_sources
+
+- configure ./.jshintrc 

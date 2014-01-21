@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    _links.scss
+\*------------------------------------*/
+/**
+ *
+ * styling link elements
+ * the <a> tag and .link class default to a standard link
+ * =links........base links
+ * =complex......complex links
+ * =figure.......figure-based links
+ * =outline......outline on links
+ *
+ */
+
+/**
+* =links
+*/
+a, .link {
+	@extend .avenir-roman;
+	@include font-size($body-size);
+	color:$baselink;
+	line-height:normal;
+	text-decoration:underline;
+	&.link__breadcrumb {
+		color:$black;
+		padding:5px 0 5px 0;
+	}
+}
+
+a.link--burger {
+	background:url(../gfx/icons/burger_icon.png) no-repeat center center;
+	height:40px;
+	margin:-20px 0 0 0;
+	overflow:hidden;
+	position:absolute;
+	right:10px;
+	text-indent:-1000em;
+	top:50%;
+	width:40px;
+}
+
+/**
+* =complex
+*/
+.link--complex {
+	/*todo*/
+}
+
+/**
+* =figure
+*/
+.link--figure {
+	text-decoration:none;
+	figure {
+		@extend .extd-naked;
+		display:block;
+		overflow:hidden;
+	}
+	figcaption {
+		@extend .avenir-roman;
+		@include font-size($body-size);
+		color:$white;
+		display:block;
+	}
+}
+
+/**
+* =outline
+*/
+.link:active, .link:focus,
+.link--complex:active, .link--complex:focus,
+.link--figure:active, .link--figure:focus {
+	outline:thin dotted;
+}
+
+/**
+* =blankWindow
+*/
+a.link--blankWindow {
+	background: transparent url(../gfx/icons/external-link.png) right 0 no-repeat;
+	@include px2em(13px, padding-right);
+}

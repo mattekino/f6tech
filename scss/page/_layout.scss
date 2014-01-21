@@ -1,0 +1,57 @@
+/*------------------------------------*\
+    _layout.scss
+\*------------------------------------*/
+/**
+ *
+ * styling the layout classes
+ * the .page class resets Inuit's default left margin and padding on grids
+ * -> grid elements must be children of layout elements
+ * =layout
+ *
+ */
+
+body {
+	@extend .extd-naked;
+	@extend .avenir-roman;
+	@include font-size($body-size);
+	background:none $white;
+	line-height:normal;
+	overflow:hidden;
+}
+
+/**
+* =layout
+*/
+.page {
+	@extend .extd-naked;
+	position:relative;
+	width:100%;
+	.grid, .grid__item {
+		margin-left:0;
+		padding-left:0;
+	}
+}
+
+.layout-centered {
+	@extend .extd-centered;
+	background:none transparent;
+	position:relative;
+	max-width:$max-width;
+	min-width:$min-width;
+	/* mediaqueries */
+	@include media-query(desk) {
+		padding:0 20px;
+	}
+	@include media-query(lap) {
+		padding:0 10px;
+	}
+	@include media-query(palm) {
+		padding:0 10px;
+	}
+}
+
+.layout-full {
+	margin:0;
+	padding:0;
+	width:100%;
+}

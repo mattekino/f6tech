@@ -1,0 +1,48 @@
+/*------------------------------------*\
+    _media.scss
+\*------------------------------------*/
+/**
+ *
+ * styling media elements : image, figure, video, audio
+ * =image...........base img
+ * =figure..........base figure and figcaption
+ * =video...........base video
+ * =audio...........base audio
+ *
+ */
+
+/**
+* =image
+*/
+img, .img {
+	/*todo*/
+}
+
+/**
+* =figure
+*/
+figure {
+	@extend .extd-naked;
+	display:block;
+	text-align:center;
+	>img {
+		display:inline-block;
+	}
+	figcaption {
+		display:block;
+	}
+}
+
+/**
+* =video
+*/
+video, .video {
+	/*todo*/
+}
+
+/**
+* =audio
+*/
+audio, .audio {
+	/*todo*/
+}

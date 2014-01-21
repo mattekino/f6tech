@@ -1,0 +1,49 @@
+/*------------------------------------*\
+    _table.scss
+\*------------------------------------*/
+/**
+ *
+ * use this file style table elements
+ * distinction is made between layout table and data table
+ * =table.............base table element
+ * =layout table......base layout table
+ * =data table........base data table
+ *
+ */
+
+/**
+* =table
+*/
+table {
+	/*todo*/
+}
+
+/**
+* =layout table
+*/
+.layout__table {
+	td {
+		/*todo*/
+	}
+}
+
+/**
+* =data table
+*/
+.data__table {
+	caption {
+		/*todo*/
+	}
+	thead {
+		/*todo*/
+	}
+	tfoot {
+		/*todo*/
+	}
+	th {
+		/*todo*/
+	}
+	td {
+		/*todo*/
+	}
+}

@@ -1,0 +1,80 @@
+/*------------------------------------*\
+    _headings.scss
+\*------------------------------------*/
+/**
+ *
+ * styling h1 to h6 titles with mobile sizing mediaqueries
+ * =headings..........base headings
+ * =mediaqueries......fontsize multiplicator
+ *
+ */
+
+/**
+* =headings
+*/
+h1,.h1-size{
+	@extend .avenir-black;
+	@extend .extd-basefontstyle;
+	@include font-size($h1-size);
+	@include media-query(lap){
+		@include font-size-lap($h1-size);
+	}
+	@include media-query(palm){
+		@include font-size-palm($h1-size);
+	}
+}
+h2,.h2-size{
+	@extend .avenir-roman;
+	@extend .extd-basefontstyle;
+	@include font-size($h2-size);
+	@include media-query(lap){
+		@include font-size-lap($h2-size);
+	}
+	@include media-query(palm){
+		@include font-size-palm($h2-size);
+	}
+}
+h3,.h3-size{
+	@extend .avenir-roman;
+	@extend .extd-basefontstyle;
+	@include font-size($h3-size);
+	@include media-query(lap){
+		@include font-size-lap($h3-size);
+	}
+	@include media-query(palm){
+		@include font-size-palm($h3-size);
+	}
+}
+h4,.h4-size{
+	@extend .avenir-roman;
+	@extend .extd-basefontstyle;
+	@include font-size($h4-size);
+	@include media-query(lap){
+		@include font-size-lap($h4-size);
+	}
+	@include media-query(palm){
+		@include font-size-palm($h4-size);
+	}
+}
+h5,.h5-size{
+	@extend .avenir-roman;
+	@extend .extd-basefontstyle;
+	@include font-size($h5-size);
+	@include media-query(lap){
+		@include font-size-lap($h5-size);
+	}
+	@include media-query(palm){
+		@include font-size-palm($h5-size);
+	}
+}
+h6,.h6-size{
+	@extend .avenir-roman;
+	@extend .extd-basefontstyle;
+	@include font-size($h6-size);
+	@include media-query(lap){
+		@include font-size-lap($h6-size);
+	}
+	@include media-query(palm){
+		@include font-size-palm($h6-size);
+	}
+}

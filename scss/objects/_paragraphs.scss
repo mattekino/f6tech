@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    _paragraphs.scss
+\*------------------------------------*/
+/**
+ *
+ * styling basic paragraphs
+ * =paragraphs........base paragraphs
+ * =optionals.........optional elements
+ *
+ */
+
+/**
+ * =paragraphs
+ */
+p, .p {
+	@extend .extd-naked;
+	@extend .avenir-roman;
+	@include font-size($body-size);
+	line-height:normal;
+}
+
+/**
+ * =optionals
+ */
+strong {
+	/*todo*/
+}
+
+em {
+	/*todo*/
+}
+
+sup {
+	@extend .p;
+	@include font-size($body-size*0.5);
+	line-height:normal;
+}
+
+sub {
+	@extend .p;
+	@include font-size($body-size*0.5);
+	line-height:normal;
+}

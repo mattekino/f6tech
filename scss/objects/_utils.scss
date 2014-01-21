@@ -1,0 +1,294 @@
+/*------------------------------------*\
+    _utils.scss
+\*------------------------------------*/
+/**
+ *
+ * Custom variables
+ * =colors............basic colors
+ * =fontsize..........overrides inuit.css font sizes
+ * =dimensions........overrides inuit.css breakpoints
+ *
+ * 'toolbox' : extends, helpers, mixins
+ * =extends...............global extends
+ * =helpers...............global helpers
+ * =mixins................global mixins
+ *
+ */
+
+/*------------------------------------*\
+    $Custom vars
+\*------------------------------------*/
+
+/**
+* =colors
+*/
+$white:                     #ffffff;
+$black:                     #000000;
+$grey:                      #666666;        // body font
+$grey-dark:                 #333333;        // darker grey
+$silver:                    #B2B2B2;        // borders
+$silver-light:              #F7F7F7;        // lighter borders
+$red:                       #e30000;        // error color
+$baselink:                  #0000EE;        // standard link color
+
+/**
+ * =fontsize
+ */
+$h1-size:                   40px;           // .alpha
+$h2-size:                   30px;           // .beta
+$h2-size-ital:              25px;           // .beta
+$h3-size:                   24px;           // .gamma
+$h4-size:                   18px;           // .delta
+$h5-size:                   14px;           // .epsilon
+$h6-size:                   12px;           // .zeta
+$body-size:                 14px;           // base body size
+
+/* used for font size calculations */
+$base-font-size:            12px!default;   // base font size
+$font-multiplicator:        1rem;
+$font-multiplicator-lap:    0.85rem;
+$font-multiplicator-palm:   0.7rem;
+
+/**
+ * =dimensions
+ */
+$lap-start:                 481px;          // mobile breakpoint
+$desk-start:                1024px;         // tablet breakpoint
+$desk-wide-start:           1200px;         // max width
+
+$max-width:                 1024px;         // max width
+$min-width:                 320px;          // min width
+
+/*------------------------------------*\
+    $toolbox
+\*------------------------------------*/
+
+ /**
+ * =extends
+ */
+.extd-overtop {
+    margin-bottom:-50px;
+    top:-50px;
+}
+
+.extd-inline-block {
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+}
+
+.extd-naked {
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.extd-centered {
+    margin:0 auto;
+}
+
+.extd-no-bullets{
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.extd-standard-text{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	margin: 0;
+}
+
+.extd-basefontstyle {
+    font-style:normal;
+    line-height:normal;
+}
+
+.extd-formelement {
+    background:none;
+    font-family: 'avenir_roman', Arial, sans-serif;
+}
+
+/* Avenir font extends */
+.avenir-roman {
+    font-family: 'avenir_roman', Arial, sans-serif;
+}
+
+.avenir-book {
+    font-family: 'avenir_book', Arial, sans-serif;
+}
+
+.avenir-black {
+    font-family: 'avenir_black', Arial, sans-serif;
+}
+
+/**
+ * =helpers
+ */
+.overtop {
+    @include media-query(desk) {
+        margin-bottom:-50px;
+        top:-50px;
+    }
+    @include media-query(lap) {
+        margin-bottom:0;
+        top:0;
+    }
+    @include media-query(palm) {
+        margin-bottom:0;
+        top:0;
+    }
+}
+
+.push-top {
+    @include media-query(desk) {
+        margin-top:50px;
+    }
+    @include media-query(lap) {
+        margin-top:0;
+    }
+    @include media-query(palm) {
+        margin-top:0;
+    }
+}
+
+.push-bot {
+    @include media-query(desk) {
+        margin-bottom:50px;
+    }
+    @include media-query(lap) {
+        margin-bottom:0;
+    }
+    @include media-query(palm) {
+        margin-bottom:0;
+    }
+}
+
+.hyphens {
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+      -epub-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+         -o-hyphens: auto;
+            hyphens: auto;
+}
+
+.text-centered {
+    text-align:center;
+}
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden, .phone-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.push-right {
+    float:right;
+}
+
+.push-left {
+    float:left;
+}
+
+/**
+ * =mixins
+ */
+@mixin font-face($font-url, $font-filename, $font-aliasname, $weight) {
+  @font-face {
+    font: {
+      family: $font-aliasname;
+      style: normal;
+      weight: $weight;
+    }
+    src: url($font-url + "/" + $font-filename + ".eot");
+    src: url($font-url + "/" + $font-filename + ".eot?#stopIE678here") format('forceIE9woff'),
+    url($font-url + "/" + $font-filename + ".woff") format("woff"),
+    url($font-url + "/" + $font-filename + ".ttf") format("truetype");
+  }
+}
+
+/* font-size */
+@mixin font-size($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*$font-multiplicator;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+
+/* px2em */
+@mixin px2em($px-size, $element){
+    #{$element}:$px-size;
+    #{$element}:($px-size / $base-font-size)*$font-multiplicator;
+}
+
+/* font-size multiplicator */
+@mixin font-size-lap($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*$font-multiplicator-lap;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+
+@mixin font-size-palm($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*$font-multiplicator-palm;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+
+@mixin box-shadow($val, $val) {
+    box-shadow: $val;
+    -moz-box-shadow: $val;
+    -webkit-box-shadow: $val;
+}
+
+@mixin border-radius($val) {
+	-webkit-border-radius: $val;
+	-moz-border-radius: $val;
+	border-radius: $val;
+}

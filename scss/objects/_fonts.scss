@@ -1,0 +1,18 @@
+/*------------------------------------*\
+    _fonts.scss
+\*------------------------------------*/
+/**
+ *
+ * use this file to include web fonts
+ * using the font-face mixin and targeting the html/fonts directory :
+ * @include font-face('../fonts', 'fileName(no extension)', 'cssFileName', weight);
+ * =fonts......base fonts includes
+ *
+ */
+
+/**
+* =fonts
+*/
+@include font-face('../fonts', 'avenir-roman', 'avenir_roman', normal);
+@include font-face('../fonts', 'avenir-book', 'avenir_book', normal);
+@include font-face('../fonts', 'avenir-black', 'avenir_black', normal);

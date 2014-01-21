@@ -1,0 +1,38 @@
+/*------------------------------------*\
+    _ui.scss
+\*------------------------------------*/
+/**
+ * 
+ * styling generic classes
+ * =base
+ * =backgrounds
+ *
+ */
+
+/**
+* =base
+*/
+html{
+    font:1em/1.5 Arial, Helvetica, sans-serif;
+    padding:0;
+    color:$black;
+}
+
+/**
+* =backgrounds
+*/
+.bg--hash {
+	background:url(../gfx/backgrounds/bg_pattern_hash.jpg) repeat left top $black;
+}
+
+.bg--black {
+	background:none $black;
+}
+
+.bg--white {
+	background:none $white;
+}
+
+.bg--grey {
+	background:none $grey;
+}

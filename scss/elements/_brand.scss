@@ -1,0 +1,100 @@
+/*------------------------------------*\
+    _brand.scss
+\*------------------------------------*/
+/**
+ *
+ * styling the brand / branded elements (logo..)
+ * =brand......base brand
+ *
+ */
+
+/**
+* =brand
+*/
+.brand {
+	padding:10px 10px 10px 0;
+	a {
+		@include border-radius(5px);
+		background:none $black;
+		display:inline-block;
+		padding:10px;
+		text-align:center;
+		text-decoration:none;
+		text-transform:uppercase;
+		width:100%;
+		img {
+			margin:0 10px 0 0;
+		}
+		span {
+			@extend .avenir-black;
+			@include font-size(25px);
+			color:$white;
+			letter-spacing:3px;
+			line-height:normal;
+		}
+		/* mediaqueries */
+		@include media-query(desk) {
+			img, span {
+				display:inline-block;
+				vertical-align:middle;
+			}
+		}
+		@include media-query(lap) {
+			span {
+				display:none;
+			}
+			img {
+				display:inline-block;
+				margin:0 auto;
+			}
+		}
+		@include media-query(palm) {
+			span {
+				display:none;
+			}
+			img {
+				display:inline-block;
+				margin:0 auto;
+			}
+		}
+	}
+}
+
+.brand__logos {
+	@extend .extd-naked;
+	li {
+		text-align:center;
+	}
+	/* mediaqueries */
+	@include media-query(desk) {
+		padding:20px 0 10px 0;
+		.link--figure {
+			figcaption {
+				display:block;
+			}
+		}
+	}
+	@include media-query(lap) {
+		padding:20px 0 10px 0;
+		.link--figure {
+			figcaption {
+				display:none;
+			}
+		}
+	}
+	@include media-query(palm) {
+		padding:10px 0 10px 0;
+		.link--figure {
+			figcaption {
+				display:none;
+			}
+		}
+	}
+}
+
+.brand__baseline {
+	padding:10px 0 10px 0;
+	p {
+		color:$white;
+	}
+}

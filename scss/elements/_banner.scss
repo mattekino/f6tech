@@ -1,0 +1,52 @@
+/*------------------------------------*\
+    _banners.scss
+\*------------------------------------*/
+/**
+ *
+ * styling banner-like elements
+ * =banners........base banners
+ *
+ */
+
+/**
+* =banners
+*/
+.banner__image {
+	img {
+		display:block;
+	}
+}
+
+.banner__push {
+	.push__content {
+		padding:20px 0 20px 0;
+		a {
+			display:block;
+		}
+	}
+	/* mediaqueries */
+	@include media-query(desk) {
+		.push__content {
+			a {
+				border:1px solid $grey-dark;
+				margin:0 20px 0 20px;
+			}
+		}
+	}
+	@include media-query(lap) {
+		.push__content {
+			a {
+				border:1px solid $grey-dark;
+				margin:0 20px 0 20px;
+			}
+		}
+	}
+	@include media-query(palm) {
+		.push__content {
+			a {
+				border:none;
+				margin:10px 0 10px 0;
+			}
+		}
+	}
+}

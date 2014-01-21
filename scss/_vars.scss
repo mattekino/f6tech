@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    _vars.scss
+\*------------------------------------*/
+/**
+ *
+ * Overrides
+ * =flags.............inuit.css flags
+ * 
+ */
+
+/*------------------------------------*\
+    $Overrides
+\*------------------------------------*/
+
+/**
+* =flags
+*/
+$use-grids:         true;
+$use-flexbox:       true;
+$use-columns:       false;
+$use-nav:           true;
+$use-options:       false;
+$use-pagination:    true;
+$use-breadcrumb:    true;
+$use-media:         true;
+$use-marginalia:    false;
+$use-island:        true;
+$use-block-list:    true;
+$use-matrix:        false;
+$use-split:         false;
+$use-this-or-this:  false;
+$use-link-complex:  true;
+$use-flyout:        false;
+$use-arrows:        true;
+$use-sprite:        true;
+$use-icon-text:     true;
+$use-beautons:      false;
+$use-lozenges:      true;
+$use-rules:         false;
+$use-stats:         false;
+$use-greybox:       false;
+
+$responsive:        true;

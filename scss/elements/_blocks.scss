@@ -1,0 +1,43 @@
+/*------------------------------------*\
+    _blocks.scss
+\*------------------------------------*/
+/**
+ *
+ * styling blocks of content
+ * =blocks.........base blocks (content level)
+ *
+ */
+
+/**
+* =blocks
+*/
+.content {
+	.block__main {
+		@include media-query(desk) {
+			padding-bottom:20px;
+			padding-top:20px;
+		}
+		@include media-query(lap) {
+			padding-bottom:10px;
+			padding-top:10px;
+		}
+		@include media-query(palm) {
+			padding-bottom:10px;
+			padding-top:10px;
+		}
+	}
+	.block__second {
+		@include media-query(desk) {
+			padding-bottom:20px;
+			padding-top:20px;
+		}
+		@include media-query(lap) {
+			padding-bottom:10px;
+			padding-top:10px;
+		}
+		@include media-query(palm) {
+			padding-bottom:10px;
+			padding-top:10px;
+		}
+	}
+}

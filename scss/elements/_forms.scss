@@ -1,0 +1,87 @@
+/*------------------------------------*\
+    _forms.scss
+\*------------------------------------*/
+/**
+ *
+ * styling form compounds
+ * =forms......base form compounds
+ * =legend.....base legends
+ * =search.....base search form
+ * =error......base error class
+ *
+ */
+
+/**
+* =forms
+*/
+form, fieldset, legend {
+	@extend .extd-naked;
+	@extend .extd-formelement;
+}
+
+.form__group {
+	margin-bottom:10px;
+	margin-top:10px;
+	padding:0 10px 0 10px;
+}
+
+.form__line {
+	display:block;
+	margin-bottom:5px;
+	margin-top:5px;
+	width:100%;
+}
+
+.form__actions {
+	@extend .form__line;
+	text-align:right;
+}
+
+/**
+* =legend
+*/
+legend {
+	@include font-size($body-size);
+	display:block;
+	line-height:normal;
+}
+
+/**
+* =search
+*/
+#searchForm {
+	position:relative;
+	width:100%;
+	/*input*/.searchForm__input {
+		display:block;
+	}
+	/*input*/.searchForm__submit {
+		bottom:0;
+		position:absolute;
+		right:0;
+	}
+	/* mediaqueries */
+	@include media-query(desk) {
+		padding:0 20px 0 20px;
+	}
+	@include media-query(lap) {
+		padding:0 20px 0 0;
+	}
+	@include media-query(palm) {
+		padding:0 20px 0 0;
+	}
+}
+
+/**
+* =error
+*/
+.form-error {
+	color:$red;
+	label {
+		color:$red;
+	}
+	input,textarea,select {
+		border:1px solid $red;
+		color:$red;
+	}
+}

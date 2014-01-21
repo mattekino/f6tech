@@ -1,0 +1,109 @@
+/*------------------------------------*\
+    _navigation.scss
+\*------------------------------------*/
+/**
+ *
+ * styling the navigation element
+ * =navigation......base navigation
+ *
+ */
+
+/**
+* =navigation
+*/
+.navigation {
+	/*ul*/.nav {
+		li {
+			text-align:center;
+			&.nav__item {
+				/*a*/.nav__link {
+					@extend .avenir-black;
+					@include font-size(16px);
+					color:$grey;
+					padding:23px 0 23px 0;
+					text-decoration:none;
+					text-transform:uppercase;
+					&:hover {
+						color:$black;
+					}
+				}
+				&.nav__form {
+					@extend .avenir-roman;
+					text-align:left;
+				}
+			}
+		}
+		&.nav--opened {
+			background:none $white;
+			border:1px solid $silver;
+			display:block;
+			position:absolute;
+			right:10px;
+			top:70px;
+			z-index:5;
+			li {
+				display:block;
+				&.nav__item {
+					border-bottom:1px solid $silver;
+					display:block;
+					padding:5px 5px 5px 5px;
+					text-align:left;
+					width:100%;
+					/*a*/.nav__link {
+						padding:5px 0 5px 10px;
+					}
+					&.nav__form {
+						border-bottom:none;
+						padding:10px;
+						label {
+							display:none;
+						}
+					}
+				}
+			}
+		}
+	}
+	.nav__burger {
+		height:100%;
+		text-align:right;
+		width:100%;
+	}
+	/* mediaqueries */
+	@include media-query(desk) {
+		height:auto;
+		.nav__burger {
+			display:none;
+		}
+		/*ul*/.nav {
+			display:table;
+			padding:10px 0 10px 0;
+		}
+	}
+	@include media-query(lap) {
+		height:auto;
+		.nav__burger {
+			display:inline-block;
+		}
+		/*ul*/.nav {
+			display:none;
+			padding:0;
+			&.nav--opened {
+				width:250px;
+			}
+		}
+	}
+	@include media-query(palm) {
+		height:90px;
+		.nav__burger {
+			display:inline-block;
+		}
+		/*ul*/.nav {
+			display:none;
+			padding:0;
+			&.nav--opened {
+				width:250px;
+			}
+		}
+	}
+}
+ 

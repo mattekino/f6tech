@@ -1,0 +1,150 @@
+/*------------------------------------*\
+    _formobjects.scss
+\*------------------------------------*/
+/**
+ *
+ * styling form elements independantly from form objects
+ * =formobjects......base form elements
+ * =labels...........base labels
+ * =inputs...........base inputs
+ * =submit...........base submit and button
+ * =textarea.........base textarea
+ * =select...........base select
+ * =checkbox.........base checkbox
+ * =radio............base radio
+ * =disabled.........base disabled class
+ * =outline..........base outline
+ *
+ */
+
+/**
+* =formobjects
+*/
+label, input, select, textarea {
+	@extend .extd-naked;
+	@extend .extd-formelement;
+	display:block;
+}
+
+.form__object {
+	background:none $white;
+	border:1px solid $silver;
+	color:$grey;
+	padding:5px 5px 5px 5px;
+}
+
+.inb__element {
+	display:inline-block;
+	vertical-align:middle;
+}
+
+/**
+ * =labels
+ */
+label, .label {
+	@include font-size($body-size);
+	color:$black;
+	line-height:normal;
+	margin:5px 0 5px 0;
+	&.label--inb {
+		@extend .inb__element;
+		margin:0 0 0 5px;
+	}
+}
+
+/**
+ * =inputs
+ */
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="tel"],
+input[type="url"], input[type="number"], input[type="date"], input[type="datetime"], input[type="datetime-local"],
+input[type="month"], input[type="time"], input[type="week"], .text-input, textarea {
+	@extend .form__object;
+	width:100%;
+}
+
+input[type="date"] {
+	/*todo*/
+}
+
+input[type="file"] {
+	/*todo*/
+}
+
+input[type="color"] {
+	/*todo*/
+}
+
+input[type="range"] {
+	/*todo*/
+}
+
+/**
+ * =submit
+ */
+input[type="submit"], input[type="button"], .submit, .button {
+	@extend .form__object;
+	display:inline-block;
+	&:hover {
+		color:$black;
+	}
+}
+
+input[type="submit"] {
+	/*todo*/
+}
+
+input[type="button"] {
+	/*todo*/
+}
+
+input[type="reset"], .reset {
+	/*todo*/
+}
+
+/**
+ * =textarea
+ */
+textarea, .text-area {
+	@extend .form__object;
+	width:100%;
+}
+
+/**
+ * =select
+ */
+select, .select {
+	@extend .form__object;
+	width:100%;
+}
+
+/**
+ * =checkbox
+ */
+input[type="checkbox"] {
+	@extend .inb__element;
+}
+
+/**
+ * =radio
+ */
+input[type="radio"] {
+	@extend .inb__element;
+}
+
+/**
+* =disabled
+*/
+.disabled {
+	background:none $silver;
+	border:1px solid $grey;
+}
+
+/**
+* =outline
+*/
+.submit:active, .submit:focus,
+.button:active, .button:focus,
+.text-input:active, .text-input:focus,
+.text-area:active, .text-area:focus{
+   outline:thin dotted;
+}

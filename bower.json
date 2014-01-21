@@ -1,0 +1,32 @@
+{
+  "name": "template inuit.css",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mattfullsix/template_inuit",
+  "authors": [
+    "mattfullsix"
+  ],
+  "description": "templating inuit f6Tech",
+  "main": "index.html",
+  "keywords": [
+    "Inuit.css",
+    "Bower",
+    "Grunt",
+    "Require",
+    "Modernizr",
+    "Srcset"
+  ],
+  "license": "BSD",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.10",
+    "inuit.css": "~5.0.0",
+    "srcset": "~0.1.0",
+    "modernizr": "~2.7.1"
+  }
+}
